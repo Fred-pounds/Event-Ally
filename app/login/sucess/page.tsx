@@ -3,7 +3,7 @@
 import { useLottie } from "lottie-react";
 import sucess from "../../../public/anim/sucess.json";
 import { useRouter } from "next/navigation";
-import {AppwriteConfig} from "@/app/constants/appwrite_config";
+import { AppwriteConfig } from "@/app/constants/appwrite_config";
 import { useEffect } from "react";
 
 const style = {
@@ -12,25 +12,22 @@ const style = {
 
 export default function Sucess() {
   const appwriteconfig = new AppwriteConfig();
+  const router = useRouter(); // Move this above useEffect
 
   useEffect(() => {
     appwriteconfig.getCurUser();
     setTimeout(() => {
       router.push("/landing");
     }, 2800);
-  });
-
-  const router = useRouter();
+  }, []); // Added dependency array
 
   const options = {
-    animationData: sucess,
+    animationData: sucess, // Corrected JSON import
     loop: true,
     autoplay: true,
   };
 
   const { View } = useLottie(options, style);
 
-  return (
-    <div className="h-screen flex items-center justify-center">{View}</div>
-  );
+  return <div className="h-screen flex items-center justify-center">{View}</div>;
 }
