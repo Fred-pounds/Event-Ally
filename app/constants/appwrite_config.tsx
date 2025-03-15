@@ -86,8 +86,8 @@ class AppwriteConfig {
     try {
       await this.account.createOAuth2Session(
         "google",
-        `${process.env.NEXT_PUBLIC_APPURL}/landing`,
-        `${process.env.NEXT_PUBLIC_APPURL}/login`
+        `https://event-ally.vercel.app/landing`,
+        `https://event-ally.vercel.app/login`
       );
       this.getCurUser();
       console.log(this.user);
