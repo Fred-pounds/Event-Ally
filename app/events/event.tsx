@@ -54,7 +54,7 @@ export default function EventListing() {
     );
 
     setLoader(false);
-  }, []);
+  }, [appwriteConfig.client, appwriteConfig.databases]);
 
   return (
     <div>

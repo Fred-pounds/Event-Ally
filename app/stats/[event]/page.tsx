@@ -87,7 +87,7 @@ export default function Event({ params }: { params: { event: string } }) {
           );
       }
     );
-  }, []);
+  }, [appwriteConfig.client, appwriteConfig.databases, params ]);
 
   const handleAcceptanceEmail = (id: string, name: string, email: string) => {
     appwriteConfig.databases

@@ -64,7 +64,7 @@ export default function Event({ params }: { params: { event: string } }) {
         }
       );
     setLoader(false);
-  }, []);
+  }, [appwriteConfig.databases, params]);
 
   return (
     <div className="bg-white min-h-screen">
