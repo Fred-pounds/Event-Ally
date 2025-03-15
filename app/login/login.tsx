@@ -51,7 +51,7 @@ export default function LoginComponent() {
                   <p className="my-auto">Google</p>
                 </div>
               </button>
-              <button
+              {/* <button
                 type="button"
                 className="gap-2 transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal flex align-items-center"
                 onClick={githublog}
@@ -60,8 +60,8 @@ export default function LoginComponent() {
                   <AiFillGithub className="text-xl my-auto" />
                   <p className="my-auto">Github</p>{" "}
                 </div>
-              </button>
-              <button
+              </button> */}
+              {/* <button
                 type="button"
                 className="gap-2 transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal flex align-items-center"
                 onClick={() => router.push("/login/magic")}
@@ -70,7 +70,7 @@ export default function LoginComponent() {
                   <VscWand className="text-xl my-auto" />
                   <p className="my-auto">Magic URL</p>{" "}
                 </div>
-              </button>
+              </button> */}
             </div>
           </div>
           

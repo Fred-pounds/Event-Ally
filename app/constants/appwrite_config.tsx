@@ -87,7 +87,7 @@ class AppwriteConfig {
       await this.account.createOAuth2Session(
         "google",
         `${process.env.NEXT_PUBLIC_APPURL}/landing`,
-        `${process.env.NEXT_PUBLIC_APPURL}/login/failure`
+        `${process.env.NEXT_PUBLIC_APPURL}/login`
       );
       this.getCurUser();
       console.log(this.user);
